@@ -1,0 +1,77 @@
+<body onload=template()>
+    <div class="jumbotron mt-4">
+        {{!-- Heading --}}
+        <h1 class="text-center display-4"> Pomodoro App</h1>
+        {{!--  Main Timer --}}
+        <div class="container timer">
+            <div class="row" style="width: 100%;">
+                <div class="col-5">
+                    <h2 id="minutes"></h2>
+                </div>
+                <div class="col-2" style="padding: 0px;">
+                    <h2>:</h2>
+                </div>
+                <div class="col-5">
+                    <h2 id="seconds"></h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center display-4 my-5" id="divdone">
+            <h3 class="" id="done"></h3>
+        </div>
+        {{!-- Start and reset buttons --}}
+        <div class="container d-flex justify-content-center aling-items-center my-5">
+            <button class="btn" onclick="start()" style="padding: 0px"><i class="fas fa-play fa-2x"></i></button>
+            <a href="/estudiar"><i class="fas fa-redo-alt fa-2x"></i></a>
+        </div>
+    </div>
+
+    <script>
+        var minutes =25;
+        var seconds ="00";
+        var click =  new Audio("click.mp3")
+        var bell =  new Audio("bell.mp3")
+
+
+        function template( ) {
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+        }
+        function start() {
+            click.play();
+
+            minutes = 24;
+            seconds = 59; 
+            
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+
+            var minutes_interval = setInterval(minutesTimer , 60000);
+            var seconds_interval = setInterval(secondsTimer , 1000);
+
+            function minutesTimer(){
+                minutes--;
+                document.getElementById("minutes").innerHTML = minutes;
+            }
+            function secondsTimer(){
+                seconds--;
+                document.getElementById("seconds").innerHTML = seconds;
+
+                if(seconds <= 0){
+                    if(minutes <= 0){
+                        clearInterval(minutes_interval);
+                        clearInterval(seconds_interval);
+                        document.getElementById("done").innerHTML = "Sesion Completada!! Tomate un descanso";
+                        document.getElementById("divdone").classList.add("alert");  
+                        document.getElementById("divdone").classList.add("alert-dismissible");
+                        document.getElementById("divdone").classList.add("alert-secondary");
+                        bell.play();     
+                    }
+
+                    seconds = 60;
+                }
+            }
+        }
+    </script>
+</body>

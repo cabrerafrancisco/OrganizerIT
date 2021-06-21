@@ -1,0 +1,32 @@
+<div class="row">
+    <div class="col-md-4 mx-auto">
+        <div class="card">
+            <div class="card-header bg-warning text-center text-white mb-3">
+                <h5>Account Login</h5>
+            </div>
+            <img src="/img/logo.png" class="rounded-circle mx-auto d-block m-4 logo" alt="">
+            <div class="card-body">
+                <form action="/users/login" method="POST">
+                    <div class="form-group">
+                        <input type="email" class="form-control" name="email" required placeholder="Email" value="{{email}}">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="pass" required minlength="4" placeholder="Password">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block" type="submit">
+                        LOGIN
+                        </button>
+                    </div>
+                    <div class="form-group text-right">
+                        <a href="/users/register">
+                            <button type="button" class="btn btn-outline-secondary">
+                                register
+                            </button>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+{{#each errors}}
+<div class="alert alert-dismissible alert-dark">
+    <h5><span class="badge bg-primary">ERROR:  </span> {{text}}</h5>
+  <button type="button" class="close" data-bs-dismiss="alert" aria-label="close">
+      <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{{/each}}
+
+{{#each empty}}
+<div class="alert alert-success notNotes" role="alert">
+  <h4 class="alert-heading"><i class="fa fa-warning"></i>  Sin notas creadas </h4>
+  <p>¡ Hola <strong style="text-transform: uppercase;"> {{text}} </strong> ! Segun nuestra base de datos, en este momento usted no posee notas creadas . . .</p>
+  <hr>
+  <p class="mb-0">Pudes crear una haciendo click en el boton de * Add + * o bien haciendo click en el boton 'opcions' en la barra de navegacion y luego en 'create note'</p>
+</div>
+{{/each}}

@@ -1,0 +1,20 @@
+<div class="float-right" style="margin: 15px" role="group" aria-label="Third group">
+    <a href="/notes/add"><button type="button" class="btn btn-warning"> Add +</button></a>
+</div>
+<div class="row">
+    {{#each notes}}
+        <div class="col-md-3" style="margin-bottom: 15px">
+            <div class="card tarjeta">
+                <div class="card-body">
+                    <h4 class="card-title d-flex justify-content-between aling-items-center">
+                        {{this.title}} <a href="/notes/edit?id={{this.id}}"><i class="fas fa-pen-square"></i></a>
+                    </h4>
+                    <p class="card-text">{{this.description}}</p>
+                    <form action="/notes/delete?id={{this.id}}" method="POST">
+                        <button type="submit" class="btn btn-danger btn-block btn-sm">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</div>

@@ -1,0 +1,47 @@
+body{
+    background-color: #7fb5b5;
+}
+.logo{
+    width: 40%;
+}
+.tarjeta ,
+.notNotes {
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+        rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.tarjeta:hover{
+    transform: scale(1.1);
+    border: 1px solid #7fddcd;
+    box-shadow: 0px 0px 30px #666;
+    transition: all .4s ease;
+}
+
+/* POMODOROO */
+
+.timer{
+    color: seashell;
+    text-align: center;
+    width: 12rem;
+    height: 12rem;
+    border: 2px solid aqua;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-play, .fa-redo-alt{
+    color: royalblue;
+    border: 2px solid transparent;
+    padding: 1rem;
+    border-radius: 20px;
+} 
+.fa-play:hover, .fa-redo-alt:hover{
+    color: violet;
+    border: 2px solid cornflowerblue;
+    transition: 0.3s ease;
+}
+#divdone{
+    border-radius: 20px;
+    transition: 0.5s ease;
+}

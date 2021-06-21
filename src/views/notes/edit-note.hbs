@@ -1,0 +1,23 @@
+<div class="col-md-4 mx-auto">
+    <div class="card notNotes">
+        <div class="card-header">
+            <h3>Edit Note</h3>
+        </div>
+        <div class="card-body">
+            <form action="/notes/edit" method="POST">
+                <div class="form-group">
+                    <input type="text" name="id" value="{{note.id}}" style="display: none;" />
+                    <input type="text" name="title" class="form-control" required value="{{note.title}}">
+                </div>
+                <div class="form-group">
+                    <textarea name="description" required class="form-control">{{note.description}}</textarea>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block" type="submit">
+                        GUARDAR
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
