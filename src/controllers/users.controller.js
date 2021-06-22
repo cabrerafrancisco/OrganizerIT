@@ -94,7 +94,6 @@ usersCtrl.login = (req, res) => {
       }else{
         req.session.name = result.name;
         req.session.email = result.email;
-        req.flash('notificacion' , '  --> Session iniciada con Exito')
         res.redirect("/");
       }
     }

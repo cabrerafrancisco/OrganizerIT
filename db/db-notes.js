@@ -13,24 +13,8 @@ const getAllNotes = (sortBy, emailSession ,cbError, cbDatos) => {
 
     const colNotas = client.db(database.db).collection(database.coleccion);
 
-    let sortObject;
-
-    switch (sortBy) {
-      case "title":
-        sortObject = { title: 1 };
-        break;
-      case "description":
-        sortObject = { description: 1 };
-        break;
-      case "email":
-        sortObject = { email: 1 };
-        break;
-      default:
-        sortObject = {};
-        break;
-    }
  
-    colNotas.find({ email: { $eq: emailSession } }).sort(sortObject).toArray(function (err, notas) {
+    colNotas.find({ email: { $eq: emailSession } }).sort({ lastUpdate: -1}).toArray(function (err, notas) {
         if (err) {
           console.log("Hubo un error convirtiendo la consulta a Array:", err);
           cbError(err);
@@ -77,6 +61,7 @@ const updateNote = (id, newData, cbError, cbResultado) => {
         $set: {
           title: newData.title,
           description: newData.description,
+          lastUpdate: new Date()
         },
       },
       (err, resultado) => {

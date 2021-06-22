@@ -22,6 +22,6 @@ router.get("/notes/edit", renderEditForm); // envio un formulario para editar da
 router.post("/notes/edit", renderUpdateNote); // recibo los datos del formulario
 
 // Borrar notas
-router.post("/notes/delete", renderDeleteNote); // recibo el id del post de la nota que quiero eliminar
+router.get("/notes/delete", renderDeleteNote); // recibo el id del post de la nota que quiero eliminar
 
 module.exports = router;

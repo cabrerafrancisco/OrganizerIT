@@ -25,7 +25,8 @@ notesCtrl.renderCreateNote = (req, res) => {
   const newNote = {
     title: req.body.title,
     description: req.body.description,
-    email: req.session.email
+    email: req.session.email,
+    lastUpdate: new Date()
   };
   dbNotas.createNote(newNote, utils.error, (resultado) => {
     req.flash('notificacion' , ' --> Nota creada ');
@@ -141,7 +142,8 @@ notesCtrl.renderDeleteNote = (req, res) => {
     res.redirect("/users/login");
     return;
   }
-
+  console.log('AQUI VA EL ID DEL DELETE' , req.query.id);
+  
   if (!req.query.id) {
     res.render("error", {
       error: "Información no válida",

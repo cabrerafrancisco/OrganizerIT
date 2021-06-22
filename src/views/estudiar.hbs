@@ -1,75 +1,148 @@
-<body onload=template()>
-    <div class="jumbotron mt-4">
+<body onload=init()>
+    <div class="jumbotron mt-4 fondo" id="background-pom">
         {{!-- Heading --}}
-        <h1 class="text-center display-4"> Pomodoro App</h1>
+        <h1 class="text-center display-2 titulo"> Pomodoro App</h1>
         {{!--  Main Timer --}}
-        <div class="container timer">
-            <div class="row" style="width: 100%;">
-                <div class="col-5">
-                    <h2 id="minutes"></h2>
-                </div>
-                <div class="col-2" style="padding: 0px;">
-                    <h2>:</h2>
-                </div>
-                <div class="col-5">
-                    <h2 id="seconds"></h2>
-                </div>
-            </div>
+        {{!-- Selection Button --}}
+
+        <div class="text-center">
+          <button onclick="setPomodoro()"  class="btn btn-primary boton-set">Pomodoro</button>
+          <button onclick="setShortBreak()"  class="btn btn-danger boton-set">Short break</button>
+          <button onclick="setLongBreak()"  class="btn btn-dark boton-set">Long break</button>
         </div>
 
+
+
+        {{!-- Clock --}}
+        <div class="row timer justify-content-center aling-items-center">
+            <div class="col-4 text-center">
+                <span id="minutes"></span>
+            </div>
+            <div class="col-1 text-center">
+                <span>:</span>
+            </div>
+            <div class="col-4 text-center">
+                <span id="seconds"></span>
+            </div>
+        </div>
+        
+        {{!-- Finish Message --}}
         <div class="text-center display-4 my-5" id="divdone">
             <h3 class="" id="done"></h3>
         </div>
         {{!-- Start and reset buttons --}}
-        <div class="container d-flex justify-content-center aling-items-center my-5">
-            <button class="btn" onclick="start()" style="padding: 0px"><i class="fas fa-play fa-2x"></i></button>
-            <a href="/estudiar"><i class="fas fa-redo-alt fa-2x"></i></a>
+        <div class="d-flex justify-content-center aling-items-center my-2">
+            <button class="fas fa-play fa-2x btn-info" onclick="start()"><i class=""></i></button>
+            <a href="/estudiar"><i class="fas fa-redo-alt fa-2x btn-info"></i></a>
         </div>
     </div>
 
+    <div class="jumbotron mt-4 fondo" id="background-pom">
+        <h1>INFORMACION</h1>
+        <hr class="my-4">
+        <p>
+             <h3 class="subrayar">Que es la tecnica Pomodoro?</h3>
+
+                <p leftmargin=10px > La Técnica Pomodoro es un método para mejorar la administración del tiempo dedicado a una actividad. Fue creado por Francesco Cirillo a fines de la década de 1980. Se basa en usar un temporizador para dividir el tiempo en intervalos fijos, llamados pomodoros, de 25 minutos de actividad, seguidos de 5 minutos de descanso, con pausas más largas cada cuatro pomodoros.  - wikipedia</p>
+
+             <h3 class="subrayar">Como se realizan los pomodoros?</h3>
+                <ul>
+                    <li>Decidir la tarea o actividad a realizar</li>
+                    <li>Poner el temporizador.</li>
+                    <li>Trabajar en la tarea de manera intensiva hasta que el temporizador suene.</li>
+                    <li>Hacer una marca para anotar qué pomodoro se ha completado.</li>
+                    <li>Tomar una pausa breve.</li>
+                    <li><strong>Cada cuatro pomodoros, tomar una pausa más larga.</strong></li>
+                </ul>
+
+             <h3 class="subrayar">Usos y beneficios</h3>
+
+                <p>El método se basa en la idea de que las pausas regulares pueden mejorar la agilidad mental,​ y nos motiva a ofrecer una respuesta eficiente frente al tiempo, en lugar del estado de ansiedad que suele provocar el "devenir" del tiempo del que se habla en los escritos de Henri Bergson y Eugene Minkowski.
+                Además, al prevenir la multitarea, ayuda a alcanzar un estado de foco más elevado, que se hace sostenible gracias a las pausas regulares.
+
+                Esta técnica se relaciona con conceptos como timeboxing y desarrollo iterativo e incremental, usados en el desarrollo de software, en contextos de desarrollo ágil, principalmente. El método también ha sido adoptado en el contexto de pair programming (programación en pareja). </p>
+
+        </p>
+    </div>
+
     <script>
-        var minutes =25;
-        var seconds ="00";
-        var click =  new Audio("click.mp3")
-        var bell =  new Audio("bell.mp3")
+        let minutes =0;
+        let seconds =0;
+        let finishMessage = '';
+        const click =  new Audio("click.mp3")
+        const bell =  new Audio("bell.mp3")
 
-
-        function template( ) {
-            document.getElementById("minutes").innerHTML = minutes;
-            document.getElementById("seconds").innerHTML = seconds;
+        function cleanMessage(){
+            document.getElementById("divdone").classList.remove("alert");  
+            document.getElementById("divdone").classList.remove("alert-dismissible");
+            document.getElementById("divdone").classList.remove("alert-secondary");
+            document.getElementById("done").innerHTML = '';
         }
+
+        function updateClock() {
+            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2,"0");
+            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2,"0");
+        }
+
+        function setPomodoro(){
+            cleanMessage();
+            document.getElementById("background-pom").classList.add("fondo-primary");
+            document.getElementById("background-pom").classList.remove("fondo-danger");
+            document.getElementById("background-pom").classList.remove("fondo-dark");
+            minutes = 25;
+            seconds =0;
+            finishMessage = 'Pomodoro Finalizado';
+            updateClock();
+        }
+        function setShortBreak(){
+            cleanMessage();
+            document.getElementById("background-pom").classList.remove("fondo-primary");
+            document.getElementById("background-pom").classList.add("fondo-danger");
+            document.getElementById("background-pom").classList.remove("fondo-dark");
+            minutes = 5;
+            seconds =0;
+            finishMessage = 'Descanso corto finalizado';
+            updateClock();
+        }
+        function setLongBreak(){
+            cleanMessage();
+            document.getElementById("background-pom").classList.remove("fondo-primary");
+            document.getElementById("background-pom").classList.remove("fondo-danger");
+            document.getElementById("background-pom").classList.add("fondo-dark");
+            minutes = 15;
+            seconds =0;
+            finishMessage = 'Descanso corto finalizado';
+            updateClock();
+        }
+        function init( ) {
+            setPomodoro();
+        }
+        
         function start() {
             click.play();
 
-            minutes = 24;
-            seconds = 59; 
-            
-            document.getElementById("minutes").innerHTML = minutes;
-            document.getElementById("seconds").innerHTML = seconds;
+            const seconds_interval = setInterval(secondsTimer , 1);
 
-            var minutes_interval = setInterval(minutesTimer , 60000);
-            var seconds_interval = setInterval(secondsTimer , 1000);
-
-            function minutesTimer(){
-                minutes--;
-                document.getElementById("minutes").innerHTML = minutes;
-            }
             function secondsTimer(){
                 seconds--;
-                document.getElementById("seconds").innerHTML = seconds;
+                document.getElementById("seconds").innerHTML = seconds.toString().padStart(2,"0");
 
                 if(seconds <= 0){
+
+
                     if(minutes <= 0){
-                        clearInterval(minutes_interval);
                         clearInterval(seconds_interval);
-                        document.getElementById("done").innerHTML = "Sesion Completada!! Tomate un descanso";
+                        document.getElementById("done").innerHTML = finishMessage; //final mensaje
                         document.getElementById("divdone").classList.add("alert");  
                         document.getElementById("divdone").classList.add("alert-dismissible");
                         document.getElementById("divdone").classList.add("alert-secondary");
                         bell.play();     
+                    }else{
+                        minutes--;
+                        document.getElementById("minutes").innerHTML = minutes.toString().padStart(2,"0");
                     }
-
                     seconds = 60;
+
                 }
             }
         }

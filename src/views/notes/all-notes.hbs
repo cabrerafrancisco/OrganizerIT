@@ -1,5 +1,5 @@
 <div class="float-right" style="margin: 15px" role="group" aria-label="Third group">
-    <a href="/notes/add"><button type="button" class="btn btn-warning"> Add +</button></a>
+    <a href="/notes/add"><button type="button" class="btn btn-warning"> ADD </button></a>
 </div>
 <div class="row">
     {{#each notes}}
@@ -10,11 +10,42 @@
                         {{this.title}} <a href="/notes/edit?id={{this.id}}"><i class="fas fa-pen-square"></i></a>
                     </h4>
                     <p class="card-text">{{this.description}}</p>
-                    <form action="/notes/delete?id={{this.id}}" method="POST">
-                        <button type="submit" class="btn btn-danger btn-block btn-sm">Delete</button>
-                    </form>
+                    
+                    <button class="btn btn-danger btn-block btn-sm" onclick='deleteAlbum("{{this.id}}", "{{this.title}}")'>Delete</button>
+                    
                 </div>
             </div>
         </div>
     {{/each}}
 </div>
+
+<div id="confirmation-modal">
+  <div id="confirmation-modal-content">
+    <h4>¿Eliminar esta nota?</h4>
+    <p id="confirmation-modal-detail"></p>
+    <button class="btn btn-primary btn-sm my-3" style="margin: 20px;" onclick="modalCancel()">Cancelar</button>
+    <button class="btn btn-danger btn-sm my-3" onclick="modalAccept()">Eliminar</button>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById("confirmation-modal");
+  let idToBeDeleted = "";
+
+  function deleteAlbum(id, title) {
+    const modalDetail = document.getElementById("confirmation-modal-detail");
+    modalDetail.textContent = `Se eliminará la nota de titulo "${title}".`
+    idToBeDeleted = id;
+    modal.style.visibility = "visible";
+  }
+
+  function modalCancel() {
+    modal.style.visibility = "hidden";
+    idToBeDeleted = "";
+  }
+
+  function modalAccept() {
+    window.location.href = `/notes/delete?id=${idToBeDeleted}`;
+  }
+
+</script>
