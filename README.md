@@ -15,7 +15,7 @@
   </a>
 </p>
 
-> Organizador para estudiar y llevar anotaciones
+> ¡Bienvenido! Te presento una aplicación sencilla que podrás utilizar para poder hacer un seguimiento de tu día de estudio, en el cual puedes utilizar las distintas opciones que ofrece. OrganizerIT es una app en la que tenes herramientas para utilizar como invitado, pero si te registras, podras utilizar a una opcion adicional en la cual encontraras una CRUD para almacenar, leer, guardar o borrar notas. Todavia esta en desarrollo, cualquier tipo de idea o sugerencia contactame en mis redes.. ¡Disfruta de la App!
 
 ### 🏠 [Homepage](https://github.com/cabrerafrancisco/Proyecto-ComiT#readme)
 
