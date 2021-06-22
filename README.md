@@ -17,6 +17,16 @@
 
 > ¡Bienvenido! Te presento una aplicación sencilla que podrás utilizar para poder hacer un seguimiento de tu día de estudio, en el cual puedes utilizar las distintas opciones que ofrece. OrganizerIT es una app en la que tenes herramientas para utilizar como invitado, pero si te registras, podras utilizar a una opcion adicional en la cual encontraras una CRUD para almacenar, leer, guardar o borrar notas. Todavia esta en desarrollo, cualquier tipo de idea o sugerencia contactame en mis redes.. ¡Disfruta de la App!
 
+### :framed_picture: Screen
+
+![login](https://user-images.githubusercontent.com/45265068/123005502-9f835a80-d38c-11eb-8eb3-843d13cfc467.png)
+
+![notas](https://user-images.githubusercontent.com/45265068/123005661-d8233400-d38c-11eb-9cb8-cae75d3f1d89.png)
+
+![pomodoro](https://user-images.githubusercontent.com/45265068/123005683-deb1ab80-d38c-11eb-8ab5-fe0cc33e2070.png)
+
+
+
 ### 🏠 [Homepage](https://github.com/cabrerafrancisco/Proyecto-ComiT#readme)
 
 
