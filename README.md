@@ -41,7 +41,7 @@ npm run dev
 
 👤 **Cabrera Francisco**
 
-* Website: portfoliocabrerafrancisco.netlify.app/
+* Website: [Portfolio](https://portfoliocabrerafrancisco.netlify.app)
 * Twitter: [@franciicasm](https://twitter.com/franciicasm)
 * Github: [@cabrerafrancisco](https://github.com/cabrerafrancisco)
 * LinkedIn: [@francabrera97](https://linkedin.com/in/francabrera97)
@@ -52,12 +52,10 @@ Contributions, issues and feature requests are welcome!<br />Feel free to check 
 
 ## Show your support
 
-Give a ⭐️ if this project helped you!
+¡Dale un ⭐️ si este proyecto te ayudó!
 
 ## 📝 License
 
 Copyright © 2021 [Cabrera Francisco](https://github.com/cabrerafrancisco).<br />
 This project is [ISC](https://github.com/cabrerafrancisco/Proyecto-ComiT/blob/master/LICENSE) licensed.
 
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
