@@ -37,7 +37,7 @@
         </div>
     </div>
 
-    <div class="jumbotron mt-4 fondo" id="background-pom">
+    <div class="jumbotron mt-4 fondo fondo-util" id="background-pom">
         <h1>INFORMACION</h1>
         <hr class="my-4">
         <p>
@@ -121,13 +121,10 @@
         function start() {
             click.play();
 
-            const seconds_interval = setInterval(secondsTimer , 1000 );
+            const seconds_interval = setInterval(secondsTimer , 1);
 
             function secondsTimer(){
-                
-                document.getElementById("seconds").innerHTML = seconds.toString().padStart(2,"0");
-                seconds--;
-                
+
                 if(seconds <= 0){
 
 
@@ -142,8 +139,16 @@
                         minutes--;
                         document.getElementById("minutes").innerHTML = minutes.toString().padStart(2,"0");
                     }
-                    seconds = 60;
+
+                    if(minutes != 0){
+                        seconds = 60;
+                    }else{
+                        seconds = 0;
+                    }
                 }
+
+                document.getElementById("seconds").innerHTML = seconds.toString().padStart(2,"0");
+                seconds--;
 
             }
         }

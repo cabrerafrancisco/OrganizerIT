@@ -1,5 +1,5 @@
 body{
-    background-color: #7fb5b5;
+    background-color: #2c387bbd;
 }
 .logo{
     width: 40%;
@@ -14,6 +14,15 @@ body{
     border: 1px solid #7fddcd;
     box-shadow: 0px 0px 30px #666;
     transition: all .4s ease;
+}
+
+.fondo-util{
+    background-color: #f3eceac7;
+}
+
+.fondo-util:hover{
+    background-color: #f3eceaf5;
+    color: rgb(70, 67, 67);
 }
 
 /* POMODOROO */
