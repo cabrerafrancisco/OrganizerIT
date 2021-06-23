@@ -53,7 +53,3 @@ Contributions, issues and feature requests are welcome!<br />Feel free to check 
 
 Copyright © 2021 [Cabrera Francisco](https://github.com/cabrerafrancisco).<br />
 This project is [ISC](https://github.com/cabrerafrancisco/Proyecto-ComiT/blob/master/LICENSE) licensed.
-<<<<<<< HEAD
-
-=======
->>>>>>> fbada84651eb84e10b80adb34885e99350453237

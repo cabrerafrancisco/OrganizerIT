@@ -90,7 +90,7 @@
             document.getElementById("background-pom").classList.remove("fondo-danger");
             document.getElementById("background-pom").classList.remove("fondo-dark");
             minutes = 25;
-            //seconds =0;
+            seconds =0;
             finishMessage = 'Pomodoro Finalizado';
             updateClock();
         }
@@ -100,7 +100,7 @@
             document.getElementById("background-pom").classList.add("fondo-danger");
             document.getElementById("background-pom").classList.remove("fondo-dark");
             minutes = 5;
-            //seconds =0;
+            seconds =0;
             finishMessage = 'Descanso corto finalizado';
             updateClock();
         }
@@ -110,7 +110,7 @@
             document.getElementById("background-pom").classList.remove("fondo-danger");
             document.getElementById("background-pom").classList.add("fondo-dark");
             minutes = 15;
-            //seconds =0;
+            seconds =0;
             finishMessage = 'Descanso largo finalizado';
             updateClock();
         }
@@ -121,15 +121,13 @@
         function start() {
             click.play();
 
-            const seconds_interval = setInterval(secondsTimer , 1000);
+            const seconds_interval = setInterval(secondsTimer , 1000 );
 
             function secondsTimer(){
                 
-                if(seconds > 0){
-                  seconds--;
-                }
                 document.getElementById("seconds").innerHTML = seconds.toString().padStart(2,"0");
-
+                seconds--;
+                
                 if(seconds <= 0){
 
 
@@ -146,6 +144,7 @@
                     }
                     seconds = 60;
                 }
+
             }
         }
     </script>
