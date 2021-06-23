@@ -125,8 +125,8 @@
 
             function secondsTimer(){
                 
-                if(seconds ==  0){
-                  seconds = 59;
+                if(seconds > 0){
+                  seconds--;
                 }
                 document.getElementById("seconds").innerHTML = seconds.toString().padStart(2,"0");
 

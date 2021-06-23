@@ -15,27 +15,20 @@
   </a>
 </p>
 
-> Organizador para estudiar y llevar anotaciones
+> ¡Bienvenido! Te presento una aplicación sencilla que podrás utilizar para poder hacer un seguimiento de tu día de estudio, en el cual puedes utilizar las distintas opciones que ofrece. OrganizerIT es una app en la que tenes herramientas para utilizar como invitado, pero si te registras, podras utilizar a una opcion adicional en la cual encontraras una CRUD para almacenar, leer, guardar o borrar notas. Todavia esta en desarrollo, cualquier tipo de idea o sugerencia contactame en mis redes.. ¡Disfruta de la App!
+
+### :framed_picture: Screen
+
+![login](https://user-images.githubusercontent.com/45265068/123005502-9f835a80-d38c-11eb-8eb3-843d13cfc467.png)
+
+![notas](https://user-images.githubusercontent.com/45265068/123005661-d8233400-d38c-11eb-9cb8-cae75d3f1d89.png)
+
+![pomodoro](https://user-images.githubusercontent.com/45265068/123005683-deb1ab80-d38c-11eb-8ab5-fe0cc33e2070.png)
+
+
 
 ### 🏠 [Homepage](https://github.com/cabrerafrancisco/Proyecto-ComiT#readme)
 
-## Install
-
-```sh
-npm install
-```
-
-## Usage
-
-```sh
-npm run start
-```
-
-## Run tests
-
-```sh
-npm run dev
-```
 
 ## Author
 
@@ -48,6 +41,8 @@ npm run dev
 
 ## 🤝 Contributing
 
+Este proyecto es un proyecto final para un curso dictado por [ComIT](https://www.comunidadit.org/). Te invito a visitar su pagina :)
+
 Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/cabrerafrancisco/Proyecto-ComiT/issues). You can also take a look at the [contributing guide](https://github.com/cabrerafrancisco/Proyecto-ComiT/blob/master/CONTRIBUTING.md).
 
 ## Show your support
@@ -58,4 +53,7 @@ Contributions, issues and feature requests are welcome!<br />Feel free to check 
 
 Copyright © 2021 [Cabrera Francisco](https://github.com/cabrerafrancisco).<br />
 This project is [ISC](https://github.com/cabrerafrancisco/Proyecto-ComiT/blob/master/LICENSE) licensed.
+<<<<<<< HEAD
 
+=======
+>>>>>>> fbada84651eb84e10b80adb34885e99350453237
