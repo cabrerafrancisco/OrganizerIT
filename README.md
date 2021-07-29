@@ -2,7 +2,7 @@
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/cabrerafrancisco/Proyecto-ComiT#readme" target="_blank">
-    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-no-brightgreen.svg" />
   </a>
   <a href="https://github.com/cabrerafrancisco/Proyecto-ComiT/graphs/commit-activity" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
@@ -15,17 +15,42 @@
   </a>
 </p>
 
-> ¡Bienvenido! Te presento una aplicación sencilla que podrás utilizar para poder hacer un seguimiento de tu día de estudio, en el cual puedes utilizar las distintas opciones que ofrece. OrganizerIT es una app en la que tenes herramientas para utilizar como invitado, pero si te registras, podras utilizar a una opcion adicional en la cual encontraras una CRUD para almacenar, leer, guardar o borrar notas. Todavia esta en desarrollo, cualquier tipo de idea o sugerencia contactame en mis redes.. ¡Disfruta de la App!
+> Welcome! I present a simple application that you can use to keep track of your study day, in which you can use the different options it offers. OrganizerIT is an app in which you have tools to use as a guest, but if you register, you can use an additional option in which you will find a CRUD to store, read, save or delete notes. It is still in development, any type of idea or suggestion contact me on my networks .. Enjoy the App!
 
 ### :framed_picture: Screen
 
+
+### Home :wedding:
+![home1](https://user-images.githubusercontent.com/45265068/127486524-968ccd08-fccc-4755-8f06-0b3ca88a3ab0.png)
+
+<hr>
+
+### Login :busts_in_silhouette:
 ![login](https://user-images.githubusercontent.com/45265068/123005502-9f835a80-d38c-11eb-8eb3-843d13cfc467.png)
 
+<hr>
+
+### My notes :closed_book: :green_book:
 ![notas](https://user-images.githubusercontent.com/45265068/123005661-d8233400-d38c-11eb-9cb8-cae75d3f1d89.png)
 
+<hr>
+
+### Pomodoro :hourglass: :books:
 ![pomodoro](https://user-images.githubusercontent.com/45265068/123005683-deb1ab80-d38c-11eb-8ab5-fe0cc33e2070.png)
 
+<hr>
 
+## Install :arrow_down:
+
+```sh
+npm install
+```
+
+## Use the app :jigsaw:
+
+```sh
+npm  start
+```
 
 ### 🏠 [Homepage](https://github.com/cabrerafrancisco/Proyecto-ComiT#readme)
 
@@ -41,13 +66,13 @@
 
 ## 🤝 Contributing
 
-Este proyecto es un proyecto final para un curso dictado por [ComIT](https://www.comunidadit.org/). Te invito a visitar su pagina :)
+This project is a final project for a course taught by [ComIT] (https://www.comunidadit.org/). I invite you to visit their page :)
 
 Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/cabrerafrancisco/Proyecto-ComiT/issues). You can also take a look at the [contributing guide](https://github.com/cabrerafrancisco/Proyecto-ComiT/blob/master/CONTRIBUTING.md).
 
 ## Show your support
 
-¡Dale un ⭐️ si este proyecto te ayudó!
+¡Give it a ⭐️ if you liked this project!
 
 ## 📝 License
 
