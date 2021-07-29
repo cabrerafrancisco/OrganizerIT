@@ -15,7 +15,12 @@
   </a>
 </p>
 
-> Welcome! I present a simple application that you can use to keep track of your study day, in which you can use the different options it offers. OrganizerIT is an app in which you have tools to use as a guest, but if you register, you can use an additional option in which you will find a CRUD to store, read, save or delete notes. It is still in development, any type of idea or suggestion contact me on my networks .. Enjoy the App!
+### Hi 👋! I present a simple application that you can use to keep track of your study day, in which you can use the different options it offers. OrganizerIT is an app in which you have tools to use as a guest, but if you register, you can use an additional option in which you will find a CRUD to store, read, save or delete notes. It is still in development, any type of idea or suggestion contact me on my networks .. Enjoy the App!
+
+## 🏠 [Homepage](https://organizerit.herokuapp.com/) (click here to see the app)
+> this user is to test the app:
+* User: [admin@admin.com]
+* Pass: [admin]
 
 ### :framed_picture: Screen
 
@@ -51,8 +56,7 @@ npm install
 ```sh
 npm  start
 ```
-
-### 🏠 [Homepage](https://github.com/cabrerafrancisco/Proyecto-ComiT#readme)
+<hr>
 
 
 ## Author
